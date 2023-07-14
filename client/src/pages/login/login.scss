@@ -1,0 +1,165 @@
+@import "../../style.scss";
+
+.login::before,
+.login::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.login::before {
+  background-color: rgba(0, 0, 255, 0.5); /* Blue with transparency */
+  backdrop-filter: blur(10px); /* Adjust the blur radius as desired */
+}
+
+.login::after {
+  background-color: rgba(0, 255, 255, 0.5); /* Cyan with transparency */
+  backdrop-filter: blur(10px); /* Adjust the blur radius as desired */
+}
+
+
+
+
+
+
+.login {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+
+  @include mobile {
+    width: 100%;
+  }
+
+  .card {
+    width: 80%;
+    display: flex;
+
+    border-radius: 10px;
+    min-height: 600px;
+    overflow: hidden;
+    background: rgba(244, 241, 246, 0.5);
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.5);
+    .left {
+      flex: 1;
+      background: linear-gradient(rgba(43, 64, 204, 0.5), rgba(11, 63, 96, 0.5)),
+        url("https://png.pngtree.com/background/20230623/original/pngtree-mobile-notification-message-in-3d-illustration-picture-image_3989319.jpg")
+          center;
+      // background: url("/client/src/assets/login.mp4");
+      background-size: cover;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      color: white;
+      @include mobile {
+        display: none;
+      }
+      @include tablet {
+        display: none;
+      }
+
+      h1 {
+        font-size: 60px;
+        line-height: 100px;
+      }
+
+      p {
+        font-size: 25px;
+      }
+
+      span {
+        font-size: 14px;
+      }
+
+      button {
+        width: 50%;
+        padding: 15px;
+        border: none;
+        border-radius: 10px;
+        background-color: white;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        background-image: linear-gradient(
+          to right,
+          rgb(17, 57, 202),
+          rgb(29, 194, 232)
+        );
+      }
+    }
+
+    .right {
+      background: #ffffff;
+      flex: 1;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      justify-content: center;
+
+      h1 {
+        background: -webkit-linear-gradient(
+          rgb(17, 57, 202),
+          rgb(29, 194, 232)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        input {
+          font-family:cursive;
+        
+          outline: none;
+          border: none;
+          border-bottom: 1px solid rgb(186, 182, 182);
+          padding: 20px 10px;
+          border-radius: 10px;
+          width: 100%;
+          // box-shadow: 0px 0px 16px rgba(0,0,0,0.1);
+        }
+
+        button {
+          width: 50%;
+          padding: 15px;
+          border: none;
+          color: white;
+          border-radius: 10px;
+          font-weight: 600;
+          background-image: linear-gradient(
+            to right,
+            rgb(17, 57, 202),
+            rgb(29, 194, 232)
+          );
+        }
+
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+    .forMobile {
+      display: none;
+      @include mobile {
+        display: block;
+      }
+      @include tablet {
+        display: block;
+      }
+    }
+  }
+}
