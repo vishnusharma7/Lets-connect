@@ -7,7 +7,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       
-      external: ['axios','@tanstack/react-query',   '/app.css'],
+      external: ['axios','@tanstack/react-query',   '/app.css', 'moment',],
     },
   },
 });
