@@ -15,12 +15,13 @@
   "name": "api",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4"
+  },
   "scripts": {
     "start": "nodemon index.js",
     "build": "webpack --config webpack.config.js"
-     
-    
   },
   "keywords": [],
   "author": "",
