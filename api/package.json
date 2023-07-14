@@ -17,7 +17,11 @@
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+ 
+        "build": "vite build"
+     
+    
   },
   "keywords": [],
   "author": "",
